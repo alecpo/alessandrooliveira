@@ -7,6 +7,8 @@
   },
   "extends": [
     "plugin:react/recommended",
+    "prettier",
+    "next",
     "standard",
     "plugin:@typescript-eslint/recommended"
   ],
@@ -25,6 +27,8 @@
     "space-before-function-paren": "off",
     "react/prop-types": "off",
     "react/jsx-uses-react": "off",
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+    "@next/next/no-img-element": "off",
+    "indent": ["error", 2]
   }
 }

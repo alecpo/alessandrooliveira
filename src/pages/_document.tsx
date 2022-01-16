@@ -43,13 +43,11 @@ export default class MyDocument extends Document {
           <meta charSet="utf-8" />
 
           <link
-            href="https://fonts.googleapis.com/css?family=Roboto:400,500,700"
+            href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=optional"
             rel="stylesheet"
           />
 
           <link rel="icon" href="/favicon.ico" />
-
-          <title>Alessandro Oliveira</title>
         </Head>
         <body>
           <Main />

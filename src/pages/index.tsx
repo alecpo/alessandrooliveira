@@ -5,16 +5,21 @@ import Row from '../components/Row'
 import { Container, Content } from '../styles/pages/Home'
 import theme from '../styles/theme'
 import { particleProps } from '../utils'
+import Head from 'next/head'
 
 const { options: defaultOptions } = particleProps
 
 function Home() {
   return (
     <Container>
+      <Head>
+        <title>Alessandro Oliveira</title>
+      </Head>
       <Particles id="tsparticles" options={defaultOptions}></Particles>
       <Content>
         <Row align="center">
           <img
+            alt=""
             src={avatar.src}
             style={{
               width: 150,
