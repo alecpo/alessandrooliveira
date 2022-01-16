@@ -47,7 +47,9 @@ export default class MyDocument extends Document {
             rel="stylesheet"
           />
 
-          <link rel="icon" href="https://rocketseat.com.br/favicon.ico" />
+          <link rel="icon" href="/favicon.ico" />
+
+          <title>Alessandro Oliveira</title>
         </Head>
         <body>
           <Main />
