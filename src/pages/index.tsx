@@ -1,11 +1,10 @@
-import { Head } from 'next/document'
 import Particles from 'react-tsparticles'
 import avatar from '../assets/avatar.jpg'
 import { Icon, Label } from '../components'
 import Row from '../components/Row'
 import { Container, Content } from '../styles/pages/Home'
 import theme from '../styles/theme'
-import { particleProps } from './utils'
+import { particleProps } from '../utils'
 
 const { options: defaultOptions } = particleProps
 

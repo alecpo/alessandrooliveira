@@ -1,5 +1,6 @@
-import { ParticlesProps } from "react-tsparticles";
-import theme from "../styles/theme";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { ParticlesProps } from 'react-tsparticles'
+import theme from '../styles/theme'
 
 export const particleProps: ParticlesProps = {
   options: {

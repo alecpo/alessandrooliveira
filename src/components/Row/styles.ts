@@ -1,9 +1,9 @@
 import styled from 'styled-components'
-import { RowProps } from './types';
+import { RowProps } from './types'
 
 export const StyledRow = styled.div<RowProps>`
   display: flex;
   flex-direction: row;
-  justify-content: ${({justify}) => justify};
-  align-items: ${({align}) => align};
-`;
+  justify-content: ${({ justify }) => justify};
+  align-items: ${({ align }) => align};
+`
