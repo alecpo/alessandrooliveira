@@ -43,7 +43,8 @@ export const InfoContainer = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
+  justify-content: space-around;
   height: 100%;
-  padding: 16px;
+  padding: 12px;
   background-color: ${({ theme }) => theme.colors.dracula.background};
 `

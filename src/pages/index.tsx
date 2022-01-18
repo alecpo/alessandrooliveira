@@ -4,15 +4,19 @@ import { Icon, Label } from '../components'
 import Row from '../components/Row'
 import { Container, Content, InfoContainer } from '../styles/pages/Home'
 import theme from '../styles/theme'
-import { particleProps } from '../utils'
+import { getAge, particleProps } from '../utils'
 import Head from 'next/head'
 import Aos from 'aos'
-import { useEffect } from 'react'
+import { useEffect, useMemo } from 'react'
 import 'aos/dist/aos.css'
 
 const { options: defaultOptions } = particleProps
 
 function Home() {
+  const age = useMemo(() => {
+    return getAge(new Date('07-19-1996'))
+  }, [])
+
   useEffect(() => {
     Aos.init({ duration: 1500 })
   }, [])
@@ -40,10 +44,12 @@ function Home() {
           />
           <InfoContainer>
             <Label size="md" underlineColor={theme.colors.dracula.pink}>
-              Alessandro Oliveira
+              Info
             </Label>
-            <Label size="md">
-              Breathing and coding. With coffe of course :)
+            <Label size="sm">Alessandro Oliveira</Label>
+            <Label size="sm">{age} anos</Label>
+            <Label size="sm" noMargin>
+              ⚡ Coffeing and coding ☕
             </Label>
           </InfoContainer>
         </Row>
