@@ -6,10 +6,17 @@ import { Container, Content } from '../styles/pages/Home'
 import theme from '../styles/theme'
 import { particleProps } from '../utils'
 import Head from 'next/head'
+import Aos from 'aos'
+import { useEffect } from 'react'
+import 'aos/dist/aos.css'
 
 const { options: defaultOptions } = particleProps
 
 function Home() {
+  useEffect(() => {
+    Aos.init({ duration: 1500 })
+  }, [])
+
   return (
     <Container>
       <Head>
@@ -17,7 +24,7 @@ function Home() {
       </Head>
       <Particles id="tsparticles" options={defaultOptions}></Particles>
       <Content>
-        <Row align="center">
+        <Row data-aos="fade-up" align="center">
           <img
             alt=""
             src={avatar.src}

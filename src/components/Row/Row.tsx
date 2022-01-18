@@ -2,8 +2,7 @@ import { memo, PropsWithChildren } from 'react'
 import { StyledRow } from './styles'
 import { RowProps } from './types'
 
-function Row({ children, align, justify }: PropsWithChildren<RowProps>) {
-  const rowProps = { align, justify }
+function Row({ children, ...rowProps }: PropsWithChildren<RowProps>) {
   return <StyledRow {...rowProps}>{children}</StyledRow>
 }
 
