@@ -52,21 +52,21 @@ function Home() {
           </InfoContainer>
         </Row>
         <Row justify="space-around">
-          <Boop rotation={50} timing={150}>
+          <Boop scale={1.5} timing={150}>
             <Icon
               href="https://github.com/alecpo"
               icon={{ prefix: 'fab', iconName: 'github' }}
               size="2x"
             />
           </Boop>
-          <Boop rotation={50} timing={150}>
+          <Boop scale={1.5} timing={150}>
             <Icon
               href="https://www.linkedin.com/in/alessandrocezar/"
               icon={{ prefix: 'fab', iconName: 'linkedin' }}
               size="2x"
             />
           </Boop>
-          <Boop rotation={50} timing={150}>
+          <Boop scale={1.5} timing={150}>
             <Icon
               href="https://www.youtube.com/channel/UC4gvSF1eNe2QHinnipYTv6Q"
               icon={{ prefix: 'fab', iconName: 'youtube' }}

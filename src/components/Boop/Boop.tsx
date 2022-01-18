@@ -1,45 +1,18 @@
-import { memo, useEffect, useState, PropsWithChildren } from 'react'
-import { StyledSpan } from './styles'
+import { memo, PropsWithChildren } from 'react'
+import { animated } from 'react-spring'
 import { BoopProps } from './types'
+import { useBoop } from '../../hooks'
 
-const defaultProps: BoopProps = {
-  rotation: 0,
-  timing: 150
-}
-
-function Boop({ children, ...boopProps }: PropsWithChildren<BoopProps>) {
-  const { timing } = boopProps
-
-  const [isBooped, setIsBooped] = useState(false)
-
-  const trigger = () => {
-    setIsBooped(true)
-  }
-
-  useEffect(() => {
-    if (!isBooped) {
-      return
-    }
-    console.log('teste')
-
-    const timeoutId = window.setTimeout(() => {
-      setIsBooped(false)
-    }, timing)
-
-    return () => {
-      window.clearTimeout(timeoutId)
-    }
-  }, [isBooped, timing])
+function Boop({
+  children,
+  ...useBoopParameters
+}: PropsWithChildren<BoopProps>) {
+  const [style, onMouseEnter] = useBoop(useBoopParameters)
 
   return (
-    <StyledSpan
-      onMouseEnter={trigger}
-      isBooped={isBooped}
-      {...defaultProps}
-      {...boopProps}
-    >
+    <animated.span onMouseEnter={onMouseEnter} style={style}>
       {children}
-    </StyledSpan>
+    </animated.span>
   )
 }
 

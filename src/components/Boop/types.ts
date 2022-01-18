@@ -1,8 +1,7 @@
 export interface BoopProps {
-  rotation : number;
-  timing : number;
-}
-
-export interface StyledSpanProps extends BoopProps {
-  isBooped: boolean;
+  x?: number;
+  y?: number;
+  rotation?: number;
+  scale?: number;
+  timing: number;
 }
