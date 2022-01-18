@@ -10,7 +10,7 @@ export const Container = styled.div`
 
   h1 {
     font-size: 36px;
-    color: ${({theme}) => theme.colors.text};
+    color: ${({ theme }) => theme.colors.text};
     margin-top: 40px;
   }
 
@@ -30,12 +30,20 @@ export const Content = styled.div`
   display: flex;
   flex: 1;
   width: 80vw;
-  background-color: ${({theme}) => theme.colors.contentBackground};
+  background-color: ${({ theme }) => theme.colors.contentBackground};
   border-radius: 8px;
   margin-top: 16px;
   margin-bottom: 16px;
-  a { color: ${({theme}) => theme.colors.text} };
-  a:visited { color: ${({theme}) => theme.colors.text} };
-  a:hover { color: ${({theme}) => theme.colors.text} };
-  a:active { color: ${({theme}) => theme.colors.text} };
+  a { color: ${({ theme }) => theme.colors.text} };
+  a:visited { color: ${({ theme }) => theme.colors.text} };
+  a:hover { color: ${({ theme }) => theme.colors.text} };
+  a:active { color: ${({ theme }) => theme.colors.text} };
+`
+export const InfoContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 100%;
+  padding: 16px;
+  background-color: ${({ theme }) => theme.colors.dracula.background};
 `

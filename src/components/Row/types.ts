@@ -23,5 +23,6 @@ export interface RowProps {
     | 'flex-end'
     | 'self-start'
     | 'self-end',
+  marginBottom?: number,
   children: ReactNode | ReactNode[],
 }

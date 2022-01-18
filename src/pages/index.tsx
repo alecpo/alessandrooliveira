@@ -2,7 +2,7 @@ import Particles from 'react-tsparticles'
 import avatar from '../assets/avatar.jpg'
 import { Icon, Label } from '../components'
 import Row from '../components/Row'
-import { Container, Content } from '../styles/pages/Home'
+import { Container, Content, InfoContainer } from '../styles/pages/Home'
 import theme from '../styles/theme'
 import { particleProps } from '../utils'
 import Head from 'next/head'
@@ -38,7 +38,14 @@ function Home() {
               borderColor: theme.colors.primary
             }}
           />
-          <Label>Alessandro Oliveira</Label>
+          <InfoContainer>
+            <Label size="md" underlineColor={theme.colors.dracula.pink}>
+              Alessandro Oliveira
+            </Label>
+            <Label size="md">
+              Breathing and coding. With coffe of course :)
+            </Label>
+          </InfoContainer>
         </Row>
         <Row justify="space-around">
           <Icon

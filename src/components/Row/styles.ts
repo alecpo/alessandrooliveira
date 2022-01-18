@@ -6,4 +6,5 @@ export const StyledRow = styled.div<RowProps>`
   flex-direction: row;
   justify-content: ${({ justify }) => justify};
   align-items: ${({ align }) => align};
+  margin-bottom: ${({ marginBottom }) => marginBottom}px;
 `
