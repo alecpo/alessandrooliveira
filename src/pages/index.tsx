@@ -9,6 +9,7 @@ import Head from 'next/head'
 import Aos from 'aos'
 import { useEffect, useMemo } from 'react'
 import 'aos/dist/aos.css'
+import AnimatedIcon from '../components/AnimatedIcon'
 
 const { options: defaultOptions } = particleProps
 
@@ -52,27 +53,27 @@ function Home() {
           </InfoContainer>
         </Row>
         <Row justify="space-around">
-          <Boop scale={1.5} timing={150}>
-            <Icon
-              href="https://github.com/alecpo"
-              icon={{ prefix: 'fab', iconName: 'github' }}
-              size="2x"
-            />
-          </Boop>
-          <Boop scale={1.5} timing={150}>
-            <Icon
-              href="https://www.linkedin.com/in/alessandrocezar/"
-              icon={{ prefix: 'fab', iconName: 'linkedin' }}
-              size="2x"
-            />
-          </Boop>
-          <Boop scale={1.5} timing={150}>
-            <Icon
-              href="https://www.youtube.com/channel/UC4gvSF1eNe2QHinnipYTv6Q"
-              icon={{ prefix: 'fab', iconName: 'youtube' }}
-              size="2x"
-            />
-          </Boop>
+          <AnimatedIcon
+            href="https://github.com/alecpo"
+            icon={{ prefix: 'fab', iconName: 'github' }}
+            size="2x"
+            primaryColor={theme.colors.gitHub.primary}
+            secondaryColor={theme.colors.gitHub.secondary}
+          />
+          <AnimatedIcon
+            href="https://www.linkedin.com/in/alessandrocezar/"
+            icon={{ prefix: 'fab', iconName: 'linkedin' }}
+            size="2x"
+            primaryColor={theme.colors.linkedIn.primary}
+            secondaryColor={theme.colors.linkedIn.secondary}
+          />
+          <AnimatedIcon
+            href="https://www.youtube.com/channel/UC4gvSF1eNe2QHinnipYTv6Q"
+            icon={{ prefix: 'fab', iconName: 'youtube' }}
+            size="2x"
+            primaryColor={theme.colors.youTube.primary}
+            secondaryColor={theme.colors.youTube.secondary}
+          />
         </Row>
       </Content>
     </Container>

@@ -1,4 +1,4 @@
-import { UseSpringProps, useSpring } from 'react-spring'
+import { UseSpringProps, useSpring, SpringConfig } from 'react-spring'
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { UseBoopParameters } from './types'
 
@@ -7,7 +7,11 @@ export default function useBoop({
   y = 0,
   rotation = 0,
   scale = 1,
-  timing = 150
+  timing = 150,
+  springConfig = {
+    tension: 300,
+    friction: 10
+  } as SpringConfig
 }: UseBoopParameters) {
   const [isBooped, setIsBooped] = useState(false)
 
@@ -22,12 +26,9 @@ export default function useBoop({
         : `translate(0px, 0px)
          rotate(0deg)
          scale(1)`,
-      config: {
-        tension: 300,
-        friction: 10
-      }
+      config: springConfig
     }),
-    [isBooped, rotation, scale, x, y]
+    [isBooped, rotation, scale, springConfig, x, y]
   )
 
   const style = useSpring(config)
