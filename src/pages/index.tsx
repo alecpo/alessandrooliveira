@@ -1,6 +1,6 @@
 import Particles from 'react-tsparticles'
 import avatar from '../assets/avatar.jpg'
-import { Icon, Label } from '../components'
+import { Boop, Icon, Label } from '../components'
 import Row from '../components/Row'
 import { Container, Content, InfoContainer } from '../styles/pages/Home'
 import theme from '../styles/theme'
@@ -46,29 +46,33 @@ function Home() {
             <Label size="md" underlineColor={theme.colors.dracula.pink}>
               Info
             </Label>
-            <Label size="sm">Alessandro Oliveira</Label>
-            <Label size="sm">{age} anos</Label>
-            <Label size="sm" noMargin>
-              ⚡ Coffeing and coding ☕
-            </Label>
+            <Label>Alessandro Oliveira</Label>
+            <Label>{age} anos</Label>
+            <Label noMargin>⚡ Coffeing and coding ☕</Label>
           </InfoContainer>
         </Row>
         <Row justify="space-around">
-          <Icon
-            href="https://github.com/alecpo"
-            icon={{ prefix: 'fab', iconName: 'github' }}
-            size="2x"
-          />
-          <Icon
-            href="https://www.linkedin.com/in/alessandrocezar/"
-            icon={{ prefix: 'fab', iconName: 'linkedin' }}
-            size="2x"
-          />
-          <Icon
-            href="https://www.youtube.com/channel/UC4gvSF1eNe2QHinnipYTv6Q"
-            icon={{ prefix: 'fab', iconName: 'youtube' }}
-            size="2x"
-          />
+          <Boop rotation={50} timing={150}>
+            <Icon
+              href="https://github.com/alecpo"
+              icon={{ prefix: 'fab', iconName: 'github' }}
+              size="2x"
+            />
+          </Boop>
+          <Boop rotation={50} timing={150}>
+            <Icon
+              href="https://www.linkedin.com/in/alessandrocezar/"
+              icon={{ prefix: 'fab', iconName: 'linkedin' }}
+              size="2x"
+            />
+          </Boop>
+          <Boop rotation={50} timing={150}>
+            <Icon
+              href="https://www.youtube.com/channel/UC4gvSF1eNe2QHinnipYTv6Q"
+              icon={{ prefix: 'fab', iconName: 'youtube' }}
+              size="2x"
+            />
+          </Boop>
         </Row>
       </Content>
     </Container>
